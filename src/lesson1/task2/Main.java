@@ -10,9 +10,9 @@ public class Main {
             System.out.println("Треугольник не существует!");
         } else {
             int p = (a + b + c) / 2;
-            double S = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-            if (S != 0){
-                System.out.println("Треугольник существует! Площадь : " + S);
+            double s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+            if (s != 0){
+                System.out.println("Треугольник существует! Площадь : " + s);
             }else{
                 System.out.println("Треугольник существует! Вырожденный треугольник!");
             }
