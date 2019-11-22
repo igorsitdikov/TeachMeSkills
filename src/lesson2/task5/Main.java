@@ -30,7 +30,7 @@ public class Main {
                     }
                 }
             }
-            System.out.println(i * 2.54);
+            System.out.println(i * 2.54 + " см");
         }
     }
 }
