@@ -7,6 +7,6 @@ public class Main {
             if (i % 2 != 0)
                 sum += i;
         }
-        System.out.println(sum);
+        System.out.println("Сумма всех нечётных чисел от 1 до 99 : " + sum);
     }
 }
