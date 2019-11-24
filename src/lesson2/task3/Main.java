@@ -5,10 +5,11 @@ public class Main {
         int sum = 0;
         for (int i = 1; i <= 256; i *= 2) {
 
-            if (i == 1)
+            if (i == 1) {
                 System.out.print(i);
-            else
+            } else {
                 System.out.print("+" + i);
+            }
 
             sum += i;
         }
