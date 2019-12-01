@@ -4,7 +4,10 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        int c = 98;
+        /*
+         * Найти среднее арифметическое элементов массива, превосходящих некоторое число С.
+         * */
+        int c = 38;
         int length = 20;
         int[] array = new int[length];
         int sum = 0;
@@ -12,7 +15,7 @@ public class Main {
         double avg = 0;
         for (int i = 0; i < array.length; i++) {
             array[i] = new Random().nextInt(100);
-            System.out.println(array[i]);
+            System.out.print(array[i] + " ");
             if (array[i] > c) {
                 sum += array[i];
                 counter++;
@@ -21,6 +24,7 @@ public class Main {
         if (counter > 0) {
             avg = (double) sum / counter;
         }
-        System.out.println("AVG " + avg);
+        System.out.println();
+        System.out.println("Cреднее арифметическое элементов массива, превосходящих число " + c + " = " + avg);
     }
 }

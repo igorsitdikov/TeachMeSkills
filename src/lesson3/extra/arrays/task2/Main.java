@@ -4,6 +4,9 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+        /*
+         * Найти среднее арифметическое элементов с нечетными номерами.
+         * */
         int length = 20;
         int[] array = new int[length];
         int sum = 0;
@@ -14,11 +17,10 @@ public class Main {
             if (i % 2 != 0) {
                 sum += array[i];
                 counter++;
-                System.out.println(i + "  " + array[i] + " " + counter + " " + sum);
             }
         }
 
         avg = (double) sum / counter;
-        System.out.println("AVG " + avg);
+        System.out.println("Среднее арифметическое элементов с нечетными номерами " + avg);
     }
 }

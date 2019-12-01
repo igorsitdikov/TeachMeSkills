@@ -1,11 +1,11 @@
-package lesson3.extra.arrays.task4;
+package lesson3.extra.arrays.task9;
 
 import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
         /*
-         * Найти наименьший нечетный элемент.
+         * Найти наименьший элемент среди элементов с четными индексами массива
          * */
         int length = 20;
         int[] array = new int[length];
@@ -13,16 +13,15 @@ public class Main {
         for (int i = 0; i < array.length; i++) {
             array[i] = new Random().nextInt(32);
             System.out.print(array[i] + " ");
-            if (i == 1) {
+            if (i == 0) {
                 min = array[i];
-            }
-            if (array[i] % 2 != 0) {
+            } else if (i % 2 == 0) {
                 if (array[i] < min) {
                     min = array[i];
                 }
             }
         }
         System.out.println();
-        System.out.println("Наименьший нечетный элемент " + min);
+        System.out.println("Наименьший элемент среди элементов с четными индексами массива " + min);
     }
 }

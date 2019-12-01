@@ -4,6 +4,9 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+        /*
+         * Проверить, различны ли все элементы массива.
+         * */
         int length = 5;
         int[] array = new int[length];
 
@@ -14,16 +17,16 @@ public class Main {
         int counter = 0;
         for (int i = 0; i < length; i++) {
             for (int j = 0; j < length; j++) {
-                if (i != j && array[i] == array[j]){
+                if (i != j && array[i] == array[j]) {
                     counter++;
                     break;
                 }
             }
         }
         System.out.println();
-        if (counter == 0){
+        if (counter == 0) {
             System.out.println("Все элементы массива различны");
-        }else{
+        } else {
             System.out.println("Не все элементы массива различны");
         }
     }
