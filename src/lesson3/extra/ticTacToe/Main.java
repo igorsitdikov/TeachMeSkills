@@ -15,11 +15,12 @@ public class Main {
         char[][] array = new char[size][size];
         boolean player = false;
         boolean win = false;
+        Scanner scanner = new Scanner(System.in);
         while (!win && counter > 0) {
             System.out.println("Введите номер строки (1-3)");
-            int x = new Scanner(System.in).nextInt() - 1;
+            int x = scanner.nextInt() - 1;
             System.out.println("Введите номер столбца (1-3)");
-            int y = new Scanner(System.in).nextInt() - 1;
+            int y = scanner.nextInt() - 1;
             if (x > 2 || x < 0 || y > 2 || y < 0) {
                 System.out.println("Выход за пределы массива");
             } else if (array[x][y] == '+' || array[x][y] == 'o') {
