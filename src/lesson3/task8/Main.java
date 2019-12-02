@@ -9,9 +9,10 @@ public class Main {
         int[] arrayFirst = new int[length];
         int[] arraySecond = new int[length];
         double[] arrayThird = new double[length];
+        Random random = new Random();
         for (int i = 0; i < length; i++) {
-            arrayFirst[i] = new Random().nextInt(10);
-            arraySecond[i] = new Random().nextInt(10);
+            arrayFirst[i] = random.nextInt(10);
+            arraySecond[i] = random.nextInt(10);
             arrayThird[i] = (double) arrayFirst[i] / arraySecond[i];
         }
         for (int i = 0; i < length; i++) {
