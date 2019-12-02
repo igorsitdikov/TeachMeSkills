@@ -10,9 +10,9 @@ public class Main {
          * */
         int length = 20;
         int[] array = new int[length];
-
+        Random random = new Random();
         for (int i = 0; i < array.length; i++) {
-            array[i] = new Random().nextInt(20);
+            array[i] = random.nextInt(20);
             System.out.print(array[i] + " ");
             if (i % 2 == 1) {
                 array[i] = 0;

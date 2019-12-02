@@ -12,8 +12,9 @@ public class Main {
         int sum = 0;
         int counter = 0;
         double avg = 0;
+        Random random = new Random();
         for (int i = 0; i < array.length; i++) {
-            array[i] = new Random().nextInt(20);
+            array[i] = random.nextInt(20);
             if (i % 2 != 0) {
                 sum += array[i];
                 counter++;

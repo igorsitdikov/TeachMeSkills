@@ -13,8 +13,9 @@ public class Main {
         int sum = 0;
         int counter = 0;
         double avg = 0;
+        Random random = new Random();
         for (int i = 0; i < array.length; i++) {
-            array[i] = new Random().nextInt(100);
+            array[i] = random.nextInt(100);
             System.out.print(array[i] + " ");
             if (array[i] > c) {
                 sum += array[i];

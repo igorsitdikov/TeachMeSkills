@@ -10,8 +10,9 @@ public class Main {
         int length = 20;
         int[] array = new int[length];
         int min = 0;
+        Random random = new Random();
         for (int i = 0; i < array.length; i++) {
-            array[i] = new Random().nextInt(32);
+            array[i] = random.nextInt(32);
             System.out.print(array[i] + " ");
             if (i == 1) {
                 min = array[i];

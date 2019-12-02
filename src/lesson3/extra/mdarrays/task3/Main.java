@@ -13,9 +13,10 @@ public class Main {
         int[][] array = new int[size][size];
         int multMain = 1;
         int multSide = 1;
+        Random random = new Random();
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                array[i][j] = new Random().nextInt(51);
+                array[i][j] = random.nextInt(51);
                 System.out.print(String.format("%02d", array[i][j]) + " ");
             }
             System.out.println();

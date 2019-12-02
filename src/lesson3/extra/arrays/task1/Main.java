@@ -10,8 +10,9 @@ public class Main {
         int length = 20;
         int[] array = new int[length];
         int multiplication = 1;
+        Random random = new Random();
         for (int i = 0; i < array.length; i++) {
-            array[i] = new Random().nextInt(10);
+            array[i] = random.nextInt(10);
             System.out.print(array[i] + " ");
             if (array[i] != 0 && array[i] % 3 == 0) {
                 multiplication *= array[i];

@@ -12,9 +12,10 @@ public class Main {
         int size = new Scanner(System.in).nextInt();
         int[][] array = new int[size][size];
         int sum = 0;
+        Random random = new Random();
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                array[i][j] = new Random().nextInt(51);
+                array[i][j] = random.nextInt(51);
                 if (i == j && array[i][j] % 2 == 0) {
                     sum += array[i][j];
                 }

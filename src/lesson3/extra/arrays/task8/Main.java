@@ -12,8 +12,9 @@ public class Main {
         int[] array = new int[length];
         int secondMax = 0;
         int max = 0;
+        Random random = new Random();
         for (int i = 0; i < array.length; i++) {
-            array[i] = new Random().nextInt(20);
+            array[i] = random.nextInt(20);
             System.out.print(array[i] + " ");
             if (i == 0) {
                 max = array[i];

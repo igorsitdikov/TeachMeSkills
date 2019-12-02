@@ -12,8 +12,9 @@ public class Main {
         int max = 0;
         int indexMax = 0;
         int indexZero = -1;
+        Random random = new Random();
         for (int i = 0; i < array.length; i++) {
-            array[i] = new Random().nextInt(32);
+            array[i] = random.nextInt(32);
             System.out.print(array[i] + " ");
             if (i == 0) {
                 max = array[i];
