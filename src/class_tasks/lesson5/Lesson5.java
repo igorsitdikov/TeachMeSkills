@@ -25,7 +25,7 @@ public class Lesson5 {
         student.doHomework(9);
 //        student.doHomework(10);
         System.out.println("Выполненные задания");
-        for (int i = 0; i < student.getHomeworkDone().length ; i++) {
+        for (int i = 0; i < student.getHomeworkDone().length; i++) {
             System.out.print(student.getHomeworkDone()[i] + " ");
         }
         System.out.println();
@@ -48,9 +48,9 @@ public class Lesson5 {
         System.out.println("Language : " + group.getProgramLanguage());
 
         group.printInfomation();
-
-        System.out.println("Выполнили задание : ");
-        Student[] st = group.checkHomework(2);
+        int taskId = 2;
+        System.out.println("Выполнили задание : " + taskId);
+        Student[] st = group.checkHomework(taskId);
         for (int i = 0; i < st.length; i++) {
             st[i].printInformation();
         }
@@ -58,6 +58,15 @@ public class Lesson5 {
         System.out.println("Количество студентов : " + Student.getNumberOfStudents());
 
         Group[] groups = group.getGroups();
-        System.out.println();
+        System.out.println("Количество групп : " + groups.length);
+
+        Coach coach = new Coach("Bruce", "Lee", 30, 10, group);
+        coach.printInformation();
+        taskId = 1;
+        System.out.println("Выполнили задание : " + taskId);
+        Student[] stFromCoach = coach.checkHomework(taskId);
+        for (int i = 0; i < stFromCoach.length; i++) {
+            stFromCoach[i].printInformation();
+        }
     }
 }
