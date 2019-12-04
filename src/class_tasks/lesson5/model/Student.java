@@ -1,9 +1,9 @@
-package class_tasks.lesson5;
+package class_tasks.lesson5.model;
 
 import java.util.Scanner;
 
 public class Student {
-    String firstName;
+    private String firstName;
     private String lastName;
     private int age;
 
