@@ -15,8 +15,29 @@ public class Coach extends Human {
     }
 
     @Override
+    public void greet() {
+        System.out.println("Привет, я тренер " + firstName);
+    }
+
+    @Override
     public void printInformation() {
         super.printInformation();
         System.out.println("years of xp : " + this.yearsOfExperience);
+    }
+
+    public int getYearsOfExperience() {
+        return yearsOfExperience;
+    }
+
+    public void setYearsOfExperience(int yearsOfExperience) {
+        this.yearsOfExperience = yearsOfExperience;
+    }
+
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
     }
 }

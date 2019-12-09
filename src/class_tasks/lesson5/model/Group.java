@@ -97,4 +97,16 @@ public class Group {
     public void setProgramLanguage(String programLanguage) {
         this.programLanguage = programLanguage;
     }
+
+    public static Group[] getGroup() {
+        return group;
+    }
+
+    public static void setGroup(Group[] group) {
+        Group.group = group;
+    }
+
+    public void setStudents(Student[] students) {
+        this.students = students;
+    }
 }

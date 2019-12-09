@@ -14,6 +14,10 @@ public class Human {
         this.age = age;
     }
 
+    public void greet() {
+        System.out.println("Привет, я " + firstName);
+    }
+
     public void printInformation() {
         System.out.println(getFullName() + "\nage : " + this.age);
     }
@@ -28,5 +32,31 @@ public class Human {
 
     public String getFullName(String prefix) {
         return prefix + this.firstName + " " + this.lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if (age >= 0 && age <= 110) {
+            this.age = age;
+        }
     }
 }

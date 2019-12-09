@@ -3,7 +3,7 @@ package class_tasks.lesson5.model;
 import java.util.Scanner;
 
 public class Student extends Human {
-    static int count = 0;
+    private static int count = 0;
     private boolean[] homework = new boolean[10];
     private int[] homeworksDone = new int[0];
 
@@ -21,6 +21,11 @@ public class Student extends Human {
     public Student(String firstName, String lastName, int age) {
         super(firstName, lastName, age);
         count++;
+    }
+
+    @Override
+    public void greet() {
+        System.out.println("Привет, я студент " + firstName);
     }
 
     public void doHomework(int id) {
@@ -45,5 +50,27 @@ public class Student extends Human {
         return this.homeworksDone;
     }
 
+    public static int getCount() {
+        return count;
+    }
 
+    public static void setCount(int count) {
+        Student.count = count;
+    }
+
+    public boolean[] getHomework() {
+        return homework;
+    }
+
+    public void setHomework(boolean[] homework) {
+        this.homework = homework;
+    }
+
+    public int[] getHomeworksDone() {
+        return homeworksDone;
+    }
+
+    public void setHomeworksDone(int[] homeworksDone) {
+        this.homeworksDone = homeworksDone;
+    }
 }

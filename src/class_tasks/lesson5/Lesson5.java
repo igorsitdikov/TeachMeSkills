@@ -25,6 +25,7 @@ public class Lesson5 {
         student.doHomework(9);
 //        student.doHomework(10);
         System.out.println("Выполненные задания");
+
         for (int i = 0; i < student.getHomeworkDone().length; i++) {
             System.out.print(student.getHomeworkDone()[i] + " ");
         }
@@ -35,6 +36,7 @@ public class Lesson5 {
         Student[] students = new Student[2];
         students[0] = new Student("Bill", "Klinton", 34);
         students[1] = new Student("Jim", "Kerry", 22);
+        students[0].greet();
         students[1].doHomework(2);
         Group group = new Group(1, students, "Python");
         Group group1 = new Group(2, students, "Python");
@@ -61,6 +63,8 @@ public class Lesson5 {
         System.out.println("Количество групп : " + groups.length);
 
         Coach coach = new Coach("Bruce", "Lee", 30, 10, group);
+        coach.greet();
+        coach.setAge(111);
         coach.printInformation();
         taskId = 1;
         System.out.println("Выполнили задание : " + taskId);
