@@ -47,8 +47,8 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         int side = 100;
-        int realTop = (int) (side / 2 + top);
-        int realBottom = (int) (side / 2 + bottom);
+        int realTop = (int) (side / 2 - top);
+        int realBottom = (int) (side / 2 - bottom);
         int realLeft = (int) (side / 2 + left);
         int realRight = (int) (side / 2 + right);
         for (int i = 0; i <= side; i++) {
@@ -56,8 +56,8 @@ public class Rectangle extends Figure {
                 if (i == side / 2 - getCenter().getY() && j == side / 2 + getCenter().getX()) {
                     System.out.print("*");
                 } else if ((j == realLeft || j == realRight)
-                        && i <= realTop
-                        && i >= realBottom) {
+                        && i >= realTop
+                        && i <= realBottom) {
                     System.out.print("|");
                 } else if ((i == realTop || i == realBottom) && j >= realLeft && j <= realRight) {
                     System.out.print("-");

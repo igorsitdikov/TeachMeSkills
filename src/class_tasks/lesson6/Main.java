@@ -14,7 +14,7 @@ public class Main {
         System.out.println("Circle perimeter " + circle.getPerimeter());
         System.out.println("Contains " + circle.containsPoint(point1));
 
-        Point point2 = new Point(2,4);
+        Point point2 = new Point(-22,-14);
         Rectangle rectangle = new Rectangle(point2, 14, 14);
         System.out.println(rectangle.getFigureType());
         rectangle.printInformation();
@@ -23,11 +23,13 @@ public class Main {
         System.out.println("contains " + rectangle.containsPoint(point1));
         rectangle.draw();
 
-        Square square = new Square(point, 4);
+        Point point3 = new Point(-22,-14);
+        Square square = new Square(point3, 4);
         System.out.println(square.getFigureType());
         square.printInformation();
         System.out.println("height "+square.getHeight());
         System.out.println("width "+square.getWidth());
         System.out.println("contains " + square.containsPoint(point1));
+        square.draw();
     }
 }
