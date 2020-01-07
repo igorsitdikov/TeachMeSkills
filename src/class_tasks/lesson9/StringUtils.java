@@ -148,7 +148,10 @@ public class StringUtils {
     }
 
     public static boolean isPalindrome(String s) {
-        return s == reverse(s);
+        if (s.length() > 1){
+            return s.equals(reverse(s));
+        }
+        return false;
     }
 
     public static String wow(String s) {
