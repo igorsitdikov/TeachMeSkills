@@ -20,12 +20,13 @@ public class Main {
         System.out.println(StringUtils.findMostFrequentChar(lolkek));
 
         String string20 = "20,123,dsadasdas20,2323,20202020";
-        System.out.println( );
-        for (int i = 0; i < StringUtils.count20(string20).length; i++) {
-            System.out.println(StringUtils.count20(string20)[i]);
+        System.out.println( "COUNT 20");
+        int[] count20 = StringUtils.count20(string20);
+        for (int i = 0; i < count20.length; i++) {
+            System.out.println(count20[i]);
         }
 
-        StringUtils.sort(str);
+        StringUtils.sort(arr);
 
         System.out.println(StringUtils.findFirstNonRepeating("hhbbeebsadsad1"));
 

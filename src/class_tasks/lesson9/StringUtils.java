@@ -53,34 +53,40 @@ public class StringUtils {
 
     public static int[] count20(String s) {
         int[] counter = new int[0];
-        int index = 0;
-        int i = 0;
-        while  (index != -1){
-            index = s.indexOf("20",i);
-            i = index;
-            i++;
+        int index;
+        char[] array = s.toCharArray();
+        for (int j = 0; j < array.length - 1; j++) {
+            char firstLetter = array[j];
+            char secondLetter = array[j + 1];
+            if (firstLetter == '2' && secondLetter == '0') {
+                int[] counterBuf = new int[counter.length + 1];
+                for (int k = 0; k < counter.length; k++) {
+                    counterBuf[k] = counter[k];
+                }
+                index = j;
+                counterBuf[counter.length] = index;
+                counter = counterBuf;
+            }
         }
-//        for (int i = 0; i < s.length();i++) {
-//            index = s.indexOf("20",i);
-//            i = index;
-//            System.out.println(i);
-//            index = s.indexOf("20", i);
-//
-//            int[] counterBuf = new int[counter.length + 1];
-//            for (int j = 0; j < counter.length; j++) {
-//                counterBuf[j] = counter[j];
-//            }
-//            i = index;
-//            counterBuf[counter.length] = i;
-//            counter = counterBuf;
-//        }
         return counter;
     }
 
     public static String[] sort(String... strings) {
         int length = strings.length;
-
-        return null;
+        String temp;
+        for (int i = 0; i < length; i++)
+        {
+            for (int j = i + 1; j < length; j++)
+            {
+                if (strings[i].compareTo(strings[j])>0)
+                {
+                    temp = strings[i];
+                    strings[i] = strings[j];
+                    strings[j] = temp;
+                }
+            }
+        }
+        return strings;
     }
 
 
