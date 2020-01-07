@@ -1,4 +1,4 @@
-package Lesson9.task4;
+package lesson9.task4;
 
 import class_tasks.lesson9.StringUtils;
 
