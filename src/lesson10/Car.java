@@ -1,8 +1,9 @@
 package lesson10;
 
+import java.io.Serializable;
 import java.util.Random;
 
-public class Car {
+public class Car implements Serializable {
     private String model;
     private int speed;
     private double price;
