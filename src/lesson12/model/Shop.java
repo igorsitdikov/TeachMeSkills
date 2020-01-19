@@ -25,7 +25,7 @@ public class Shop {
         goodsList.put(goods.getId(), goods);
     }
 
-    public Set<Goods> getGoodsList(SORT sort) {
+    public Set<Goods> getGoodsList(Sort sort) {
         Set<Goods> set = null;
         switch (sort) {
             case ID: {

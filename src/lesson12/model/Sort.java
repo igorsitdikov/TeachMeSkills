@@ -1,5 +1,5 @@
 package lesson12.model;
 
-public enum SORT {
+public enum Sort {
     DEFAULT, ID, DATE, PRICE
 }

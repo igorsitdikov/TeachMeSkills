@@ -4,7 +4,7 @@ import lesson12.model.*;
 
 public class Main {
     public static void main(String[] args) {
-        Shop_list shop = new Shop_list();
+        ShopList shop = new ShopList();
         Goods milk = new Goods(1, "Milk", 2);
         Goods sugar = new Goods(3, "Sugar", 4);
         Goods bread = new Goods(2, "Bread", 1);
@@ -14,28 +14,28 @@ public class Main {
             shop.addProduct(sugar);
             shop.addProduct(bread);
             shop.addProduct(bread);
-        } catch (ShopAddProductException ex) {
+        } catch (ProductAlreadyExist ex) {
             System.out.println(ex.getMessage());
         }
 
-        Shop_list.show(shop.getGoodsList(SORT.PRICE));
+        ShopList.show(shop.getGoodsList(Sort.PRICE));
         System.out.println();
         try {
             shop.removeProduct(4);
-        } catch (ShopRemoveProductException ex) {
+        } catch (ProductNotFound ex) {
             System.out.println(ex.getMessage());
         }
 
-        Shop_list.show(shop.getGoodsList(SORT.DATE));
+        ShopList.show(shop.getGoodsList(Sort.DATE));
         System.out.println();
         try {
             shop.editProduct(new Goods(3, "Dark bread", 2));
             shop.editProduct(new Goods(5, "Dark bread", 2));
-        } catch (ShopUpdateProductException ex) {
+        } catch (ProductAlreadyExist ex) {
             System.out.println(ex.getMessage());
         }
 
-        Shop_list.show(shop.getGoodsList());
+        ShopList.show(shop.getGoodsList());
 
     }
 }

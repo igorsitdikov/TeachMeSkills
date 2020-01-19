@@ -1,24 +1,21 @@
 package lesson12.model;
 
 public class Goods {
-    private int id;
+    private Integer id;
     private String name;
-    private int price;
+    private Integer price;
 
-    public Goods() {
-    }
-
-    public Goods(int id, String name, int price) {
+    public Goods(Integer id, String name, Integer price) {
         this.id = id;
         this.name = name;
         this.price = price;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -30,11 +27,20 @@ public class Goods {
         this.name = name;
     }
 
-    public int getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(Integer price) {
         this.price = price;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) { return true; }
+        if (obj == null || obj.getClass() != this.getClass()) { return false; }
+        Goods goods = (Goods) obj;
+
+        return id == ((Goods) obj).getId();
     }
 }

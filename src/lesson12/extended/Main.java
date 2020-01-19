@@ -1,16 +1,17 @@
 package lesson12.extended;
 
-import lesson12.model.*;
-import org.w3c.dom.ls.LSOutput;
+import lesson12.model.Goods;
+import lesson12.model.ProductAlreadyExist;
+import lesson12.model.ProductNotFound;
+import lesson12.model.ShopList;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
 
-        Shop_list shop = new Shop_list();
+        ShopList shop = new ShopList();
         Scanner scanner;
         Integer key = 1;
         while (key != 0) {
@@ -38,7 +39,7 @@ public class Main {
                     if (shop.getGoodsList().size() == 0) {
                         System.out.println("\t-> В магазине товаров нет.");
                     } else {
-                        Shop_list.show(shop.getGoodsList());
+                        ShopList.show(shop.getGoodsList());
                     }
                 }
                 break;
@@ -56,7 +57,7 @@ public class Main {
                             Integer price = Integer.valueOf(data[2]);
                             shop.addProduct(new Goods(id, name, price));
                             System.out.println("Товар успешно добавлен");
-                        } catch (ShopAddProductException ex) {
+                        } catch (ProductAlreadyExist ex) {
                             System.out.println(ex.getMessage());
                         } catch (ArrayIndexOutOfBoundsException ex) {
                             System.out.println("Введены не все данные о товаре");
@@ -82,7 +83,7 @@ public class Main {
                         try {
                             Integer id = scanner.nextInt();
                             shop.removeProduct(id);
-                        } catch (ShopRemoveProductException ex) {
+                        } catch (ProductNotFound ex) {
                             System.out.println("Продукта с таким id не существует");
                         } catch (InputMismatchException ex) {
                             System.out.println("Введенно некорректное значение");
@@ -111,7 +112,7 @@ public class Main {
                             Goods product = new Goods(id, name, price);
                             shop.editProduct(product);
                             System.out.println("Товар успешно обновлен");
-                        } catch (ShopUpdateProductException ex) {
+                        } catch (ProductAlreadyExist ex) {
                             System.out.println(ex.getMessage());
                         } catch (ArrayIndexOutOfBoundsException ex) {
                             System.out.println("Введены не все данные о товаре");
