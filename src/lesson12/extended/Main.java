@@ -22,7 +22,12 @@ public class Main {
                     "\t4. Редактирование товара.\n"
             );
 
-            key = scanner.nextInt();
+            try {
+                key = scanner.nextInt();
+            } catch (InputMismatchException ex) {
+                System.out.println("Введено неверное значение");
+                key = 0;
+            }
             switch (key) {
                 case 0: {
                     System.out.println("-> Выход. Приложение завершило работу.");

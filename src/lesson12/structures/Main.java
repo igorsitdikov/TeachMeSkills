@@ -71,9 +71,11 @@ public class Main {
         goodsSet.add(goods1);
         show(goodsSet);
 
+        System.out.println("\nTree Map\n");
+
         Map<Integer, Goods> goodsMap = new TreeMap<>();
-        goodsMap.put(goods1.getId(), goods1);
         goodsMap.put(goods2.getId(), goods2);
+        goodsMap.put(goods1.getId(), goods1);
         goodsMap.put(goods3.getId(), goods3);
         goodsMap.put(goods4.getId(), goods4);
         goodsMap.put(goods5.getId(), goods5);
@@ -93,6 +95,7 @@ public class Main {
         goodsMap.values().forEach(el -> System.out.println(el.getId() + " " + el.getName() + " " + el.getPrice()));
         System.out.println();
         goodsMap.keySet().forEach(System.out::println);
+
     }
 
     private static <T extends Goods> void show(List<T> list) {
