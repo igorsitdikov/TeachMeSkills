@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
         Shop_list shop = new Shop_list();
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner;
         Integer key = 1;
         while (key != 0) {
             System.out.println("Выберите действие \n" +
@@ -23,10 +23,10 @@ public class Main {
             );
 
             try {
+                scanner = new Scanner(System.in);
                 key = scanner.nextInt();
             } catch (InputMismatchException ex) {
-                System.out.println("Введено неверное значение");
-                key = 0;
+                key = 5;
             }
             switch (key) {
                 case 0: {
