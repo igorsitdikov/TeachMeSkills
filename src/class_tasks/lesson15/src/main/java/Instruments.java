@@ -1,3 +1,3 @@
-public enum Instruments {
-    GUITAR, CIMBALS
-}
+//public enum Instruments {
+//    GUITAR, CIMBALS
+//}
